@@ -1,20 +1,25 @@
+import PageHeader from "@/components/ui/PageHeader";
+
 export default function EmpresaPage() {
   return (
-    <main className="py-24">
-      <section className="mx-auto max-w-7xl px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-          Empresa
-        </p>
+    <main>
+      <PageHeader
+        eyebrow="Empresa"
+        title="Cleanex Argentina"
+        description="Nuestro trabajo está enfocado principalmente en labores de limpieza profesional de espacios confinados, tareas de higiene general, mantenimiento y montaje."
+      />
 
-        <h1 className="mt-4 text-5xl font-bold text-gray-900">
-          Cleanex Argentina
-        </h1>
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Compromiso, experiencia y calidad en cada servicio
+          </h2>
 
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Nuestro trabajo está enfocado principalmente en labores de limpieza
-          profesional de espacios confinados, tareas de higiene general,
-          mantenimiento y montaje.
-        </p>
+          <p className="mt-6 leading-relaxed text-gray-600">
+            Brindamos soluciones para empresas e industrias, adaptándonos a las
+            necesidades operativas de cada cliente.
+          </p>
+        </div>
       </section>
     </main>
   );
