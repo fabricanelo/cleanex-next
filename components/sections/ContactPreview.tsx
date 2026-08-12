@@ -24,18 +24,19 @@ export default function ContactPreview() {
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <div className="space-y-5 text-gray-700">
               <p>
-                <strong>Teléfono:</strong> [Dato real]
+                <strong>Administración:</strong> +54 9 3416 88-8634
               </p>
 
               <p>
-                <strong>Email:</strong> [Dato real]
+                <strong>Email:</strong> info@cleanexargentina.com
               </p>
 
               <p>
-                <strong>Ubicación:</strong> Buenos Aires, Argentina
+                <strong>Ubicación:</strong> Hipólito Yrigoyen 1070, S2600
+                Venado Tuerto, Santa Fe
               </p>
 
-              <Button>Solicitar presupuesto</Button>
+              <Button href="/contacto">Solicitar presupuesto</Button>
             </div>
           </div>
         </div>

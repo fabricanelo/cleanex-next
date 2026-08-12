@@ -1,45 +1,30 @@
-export default function LimpiezaDuctosPage() {
+import ServiceDetail from "@/components/sections/ServiceDetail";
+
+export default function LimpiezaDeDuctosYCampanasIndustrialesPage() {
   return (
-    <main className="py-24">
-      <section className="mx-auto max-w-7xl px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-          Servicios
-        </p>
-
-        <h1 className="mt-4 text-5xl font-bold text-gray-900">
-          Limpieza de ductos y campanas industriales
-        </h1>
-
-        <p className="mt-8 max-w-4xl text-lg leading-relaxed text-gray-600">
-          Ofrecemos servicios de limpieza y mantenimiento de ductos,
-          campanas y sistemas de extracción industrial, priorizando higiene,
-          funcionamiento y seguridad operativa.
-        </p>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold">
-              Limpieza especializada
-            </h2>
-
-            <p className="mt-4 leading-relaxed text-gray-600">
-              Aplicamos procedimientos específicos para sistemas de
-              extracción y ventilación industrial.
-            </p>
-          </div>
-
-          <div className="rounded-3xl bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold">
-              Mantenimiento preventivo
-            </h2>
-
-            <p className="mt-4 leading-relaxed text-gray-600">
-              Ayudamos a mantener instalaciones limpias y operativas para
-              reducir riesgos y mejorar el rendimiento.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+    <ServiceDetail
+      title="Limpieza de ductos y campanas industriales"
+      sections={[
+        {
+          heading: "CLEANEX realiza limpiezas de",
+          list: ["Ductos", "Campanas", "Extractores"],
+        },
+        {
+          paragraphs: [
+            "Es importante realizar esta limpieza en los conductos de ventilación y cocinas industriales de forma periódica para evitar un posible riesgo de incendio, malos olores y no acumular contaminantes y residuos que podrían incidir directamente en la calidad de los productos.",
+            "Una correcta higienización y posterior mantenimiento frecuencial garantizan un mejor funcionamiento de los extractores y también es una estrategia fundamental para evitar posibles focos de incendios causados por este depósito de residuos.",
+          ],
+        },
+      ]}
+      images={[
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/12.jpg", alt: "Ductos, campanas y hornos industriales" },
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/5.jpg", alt: "Ductos, campanas y hornos industriales" },
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/17.jpg", alt: "Ductos, campanas y hornos industriales" },
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/15.jpg", alt: "Ductos, campanas y hornos industriales" },
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/16.jpg", alt: "Ductos, campanas y hornos industriales" },
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/8.jpg", alt: "Ductos, campanas y hornos industriales" },
+        { src: "/images/gallery/ductos-campanas-y-hornos-industriales/2.jpg", alt: "Ductos, campanas y hornos industriales" },
+      ]}
+    />
   );
 }

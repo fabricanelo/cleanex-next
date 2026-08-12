@@ -1,0 +1,106 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Redirects 301 desde las URLs del sitio WordPress anterior hacia las nuevas
+# rutas del sitio Next.js, para conservar SEO y links existentes.
+
+[[redirects]]
+  from = "/empresa/"
+  to = "/empresa"
+  status = 301
+
+[[redirects]]
+  from = "/servicios/"
+  to = "/servicios"
+  status = 301
+
+[[redirects]]
+  from = "/servicios-higiene-en-espacios-confinados/"
+  to = "/servicios/higiene-en-espacios-confinados"
+  status = 301
+
+[[redirects]]
+  from = "/servicios-limpieza-y-mantenimiento-industrial/"
+  to = "/servicios/limpieza-y-mantenimiento-industrial"
+  status = 301
+
+[[redirects]]
+  from = "/servicios-montaje-y-reparacion-de-plantas-de-silos-estructuras-metalicas/"
+  to = "/servicios/montaje-y-reparacion-de-plantas-de-silos"
+  status = 301
+
+[[redirects]]
+  from = "/servicios-limpieza-de-ductos-y-campanas-industriales/"
+  to = "/servicios/limpieza-de-ductos-y-campanas-industriales"
+  status = 301
+
+[[redirects]]
+  from = "/galeria/"
+  to = "/galeria"
+  status = 301
+
+[[redirects]]
+  from = "/aspiracion-industrial/"
+  to = "/galeria/aspiracion-industrial"
+  status = 301
+
+[[redirects]]
+  from = "/ductos-campanas-y-hornos-industriales/"
+  to = "/galeria/ductos-campanas-y-hornos-industriales"
+  status = 301
+
+[[redirects]]
+  from = "/limpieza-industrial/"
+  to = "/galeria/limpieza-industrial"
+  status = 301
+
+[[redirects]]
+  from = "/limpieza-de-silos-industrial/"
+  to = "/galeria/limpieza-de-silos-industrial"
+  status = 301
+
+[[redirects]]
+  from = "/limpieza-de-silos-particulares/"
+  to = "/galeria/limpieza-de-silos-particulares"
+  status = 301
+
+[[redirects]]
+  from = "/limpieza-de-filtros/"
+  to = "/galeria/limpieza-de-filtros"
+  status = 301
+
+[[redirects]]
+  from = "/hidrolavado/"
+  to = "/galeria/hidrolavado"
+  status = 301
+
+[[redirects]]
+  from = "/pequenas-refacciones/"
+  to = "/galeria/pequenas-refacciones"
+  status = 301
+
+[[redirects]]
+  from = "/clientes-2/"
+  to = "/clientes"
+  status = 301
+
+[[redirects]]
+  from = "/novedades/"
+  to = "/novedades"
+  status = 301
+
+[[redirects]]
+  from = "/nuevo-sitio-web/"
+  to = "/novedades/nuevo-sitio-web"
+  status = 301
+
+[[redirects]]
+  from = "/contacto/"
+  to = "/contacto"
+  status = 301
+
+[[redirects]]
+  from = "/dejanos-tu-cv/"
+  to = "/dejanos-tu-cv"
+  status = 301

@@ -1,45 +1,53 @@
-export default function LimpiezaIndustrialPage() {
+import ServiceDetail from "@/components/sections/ServiceDetail";
+
+export default function LimpiezaYMantenimientoIndustrialPage() {
   return (
-    <main className="py-24">
-      <section className="mx-auto max-w-7xl px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-          Servicios
-        </p>
-
-        <h1 className="mt-4 text-5xl font-bold text-gray-900">
-          Limpieza y mantenimiento industrial
-        </h1>
-
-        <p className="mt-8 max-w-4xl text-lg leading-relaxed text-gray-600">
-          Realizamos tareas de limpieza y mantenimiento industrial adaptadas
-          a distintos tipos de instalaciones, garantizando calidad,
-          seguridad y eficiencia operativa.
-        </p>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold">
-              Personal capacitado
-            </h2>
-
-            <p className="mt-4 leading-relaxed text-gray-600">
-              Contamos con personal preparado para trabajar en entornos
-              industriales y operativos.
-            </p>
-          </div>
-
-          <div className="rounded-3xl bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold">
-              Seguridad operativa
-            </h2>
-
-            <p className="mt-4 leading-relaxed text-gray-600">
-              Aplicamos procedimientos de trabajo enfocados en seguridad y
-              cumplimiento.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+    <ServiceDetail
+      title="Limpieza y mantenimiento industrial"
+      sections={[
+        {
+          paragraphs: [
+            "Hoy en día y de forma progresiva se les exige a las industrias cumplir con diversas normas de seguridad, higiene y medio ambiente en sus instalaciones. CLEANEX contribuye brindando diferentes servicios de higiene industrial como:",
+          ],
+          list: [
+            "Hidro-lavados en distintas superficies",
+            "Lustrado y encerado",
+            "Limpieza de baños y vestuarios",
+            "Lavado de vidrios y ventanales",
+            "Higiene en depósitos",
+            "Higiene en comedores",
+            "Limpieza de oficinas, salas de reuniones y conferencias",
+            "Limpieza de canaletas",
+            "Limpieza de planta e instalaciones en general",
+            "Entre otros",
+          ],
+        },
+        {
+          paragraphs: [
+            "También contamos con personal calificado para realizar tareas generales de mantenimiento industrial, fundamentales para contrarrestar el desgaste natural que afecta a las instalaciones o bien son demandadas por la misma operatividad de la planta, como:",
+          ],
+          list: [
+            "Hidro-lavados en distintas superficies",
+            "Reparación y cambio de canaletas",
+            "Tareas de albañilería",
+            "Mantenimiento de tableros eléctricos",
+            "Colocación de vidrios",
+            "Pintura",
+            "Mantenimiento de espacios verdes",
+            "Personal eventual para tareas puntuales",
+            "Entre otros",
+          ],
+        },
+      ]}
+      images={[
+        { src: "/images/gallery/limpieza-industrial/21.jpg", alt: "Limpieza industrial" },
+        { src: "/images/gallery/limpieza-industrial/27.jpg", alt: "Limpieza industrial" },
+        { src: "/images/gallery/limpieza-industrial/20.jpg", alt: "Limpieza industrial" },
+        { src: "/images/gallery/limpieza-industrial/23.jpg", alt: "Limpieza industrial" },
+        { src: "/images/gallery/limpieza-industrial/16.jpg", alt: "Limpieza industrial" },
+        { src: "/images/gallery/limpieza-industrial/10.jpg", alt: "Limpieza industrial" },
+        { src: "/images/gallery/limpieza-industrial/14.jpg", alt: "Limpieza industrial" },
+      ]}
+    />
   );
 }

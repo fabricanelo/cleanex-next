@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import NewsletterForm from "@/components/forms/NewsletterForm";
+import { IconFacebook, IconInstagram } from "@/components/ui/Icon";
 
 export default function Footer() {
   return (
@@ -13,6 +15,28 @@ export default function Footer() {
             height={80}
             className="h-auto w-[220px]"
           />
+
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/cleanexargentina/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Seguir en Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-200 text-gray-700 transition hover:bg-[var(--primary)] hover:text-white"
+            >
+              <IconFacebook className="h-4 w-4" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/cleanex_argentina/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Seguir en Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-200 text-gray-700 transition hover:bg-[var(--primary)] hover:text-white"
+            >
+              <IconInstagram className="h-4 w-4" />
+            </a>
+          </div>
         </div>
 
         <div>
@@ -77,6 +101,23 @@ export default function Footer() {
           </a>
         </div>
       </Container>
+
+      <div className="border-t border-gray-200 bg-white py-10">
+        <Container className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-gray-900">
+              Suscribite al newsletter
+            </h3>
+            <p className="mt-1 text-sm text-gray-600">
+              Enterate todas nuestras novedades.
+            </p>
+          </div>
+
+          <div className="w-full md:max-w-md">
+            <NewsletterForm />
+          </div>
+        </Container>
+      </div>
 
       <div className="mt-2 bg-gray-300 py-3">
         <Container className="flex flex-col gap-2 text-xs font-medium text-gray-700 md:flex-row md:items-center md:justify-between">

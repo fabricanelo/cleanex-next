@@ -1,45 +1,37 @@
-export default function MontajeSilosPage() {
+import ServiceDetail from "@/components/sections/ServiceDetail";
+
+export default function MontajeYReparacionDePlantasDeSilosPage() {
   return (
-    <main className="py-24">
-      <section className="mx-auto max-w-7xl px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-          Servicios
-        </p>
-
-        <h1 className="mt-4 text-5xl font-bold text-gray-900">
-          Montaje y reparación de plantas de silos
-        </h1>
-
-        <p className="mt-8 max-w-4xl text-lg leading-relaxed text-gray-600">
-          Realizamos trabajos de montaje, reparación y mantenimiento de
-          estructuras metálicas y plantas de silos, adaptándonos a las
-          necesidades operativas de cada cliente.
-        </p>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold">
-              Mantenimiento estructural
-            </h2>
-
-            <p className="mt-4 leading-relaxed text-gray-600">
-              Ejecutamos tareas de reparación y conservación de estructuras
-              industriales y metálicas.
-            </p>
-          </div>
-
-          <div className="rounded-3xl bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold">
-              Soluciones industriales
-            </h2>
-
-            <p className="mt-4 leading-relaxed text-gray-600">
-              Trabajamos en proyectos orientados al mantenimiento y mejora
-              de instalaciones industriales.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+    <ServiceDetail
+      title="Montaje y reparación de plantas de silos y estructuras metálicas"
+      sections={[
+        {
+          heading: "Realizamos",
+          list: [
+            "Montaje y reparación de plantas de silos, galpones y tinglados",
+            "Fabricación de estructuras metálicas: norias, sinfines, comederos",
+            "Mecanizaciones",
+            "Fabricación e instalación de sistemas de aireación y ventilación de silos",
+            "Traslados de plantas de silos de un sitio a otro",
+          ],
+        },
+        {
+          paragraphs: [
+            "Hoy en día es importante para el sector del agro contar con una planta de silos mecanizada y realizar un correcto mantenimiento de la misma, para agilizar así el proceso productivo que se demanda y hacerlo de forma eficiente, favoreciendo la conservación y calidad de los granos tanto en el período de acopio como durante el despacho.",
+            "También contamos con sistemas que permiten prevenir la elevación de la temperatura del acopio y evitar posibles focos de incendio.",
+            "Además, nuestro personal cuenta con años de experiencia en este rubro y se encuentra altamente capacitado para brindar un servicio de excelencia.",
+          ],
+        },
+      ]}
+      images={[
+        { src: "/images/gallery/limpieza-industrial/3.jpg", alt: "Montaje y reparación de plantas de silos" },
+        { src: "/images/gallery/limpieza-de-silos-industrial/11.jpg", alt: "Limpieza de silos industrial" },
+        { src: "/images/gallery/limpieza-de-silos-particulares/6.jpg", alt: "Limpieza de silos particulares" },
+        { src: "/images/gallery/limpieza-de-silos-industrial/41.jpg", alt: "Limpieza de silos industrial" },
+        { src: "/images/gallery/limpieza-de-silos-industrial/22.jpg", alt: "Limpieza de silos industrial" },
+        { src: "/images/gallery/aspiracion-industrial/6.jpg", alt: "Aspiración industrial" },
+        { src: "/images/gallery/limpieza-de-silos-industrial/3.jpg", alt: "Limpieza de silos industrial" },
+      ]}
+    />
   );
 }

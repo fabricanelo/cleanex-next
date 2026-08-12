@@ -16,25 +16,29 @@ export default function About() {
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              En Cleanex Argentina trabajamos brindando soluciones de
-              limpieza profesional para empresas, industrias y espacios
-              corporativos.
+              CLEANEX es una empresa dedicada a brindar servicios a
+              industrias. Nuestro trabajo está enfocado principalmente en
+              labores de limpieza profesional de espacios confinados, tareas
+              de higiene general, mantenimiento y montaje industrial.
             </p>
 
             <p className="mt-4 leading-relaxed text-gray-600">
-              Nuestro enfoque combina personal capacitado, procesos de
-              trabajo eficientes y atención personalizada para garantizar
-              resultados consistentes y confiables.
+              Contamos con un grupo de profesionales especializados en
+              Seguridad, Higiene y Medio Ambiente, Administrativo-Contable,
+              Recursos Humanos, entre otros, que conforman un equipo de
+              trabajo eficiente. Nuestro personal operativo posee el
+              conocimiento, capacitación y experiencia necesaria en el rubro
+              asegurando un desempeño óptimo y responsable.
             </p>
           </div>
 
           <Image
-                 src="/images/about/about-cleanex-logo.jpg"
-                 alt="Equipo de Cleanex trabajando"
-                 width={800}
-                height={600}
-                className="h-[450px] w-full rounded-3xl object-contain bg-white p-5 shadow-lg"
-            />
+            src="/images/hero/planta-industrial.jpg"
+            alt="Cleanex Argentina trabajando en planta industrial"
+            width={1280}
+            height={1045}
+            className="h-[450px] w-full rounded-3xl object-cover shadow-lg"
+          />
         </div>
       </Container>
     </section>

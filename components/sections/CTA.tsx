@@ -22,7 +22,9 @@ export default function CTA() {
             </p>
           </div>
 
-          <Button variant="light">Contactar ahora</Button>
+          <Button href="/contacto" variant="light">
+            Contactar ahora
+          </Button>
         </div>
       </Container>
     </section>
