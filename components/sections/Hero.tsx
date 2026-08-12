@@ -33,10 +33,10 @@ export default function Hero() {
           <Image
             src="/images/hero/generales-19.jpg"
             alt="Operarios de Cleanex Argentina en tareas de limpieza industrial"
-            width={1200}
-            height={800}
+            width={1808}
+            height={704}
             priority
-            className="h-[420px] w-full rounded-3xl object-cover shadow-lg"
+            className="h-[420px] w-full rounded-3xl object-cover object-right shadow-lg"
           />
         </div>
       </Container>
