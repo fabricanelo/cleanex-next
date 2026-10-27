@@ -123,6 +123,17 @@ export default function Footer() {
         <Container className="flex flex-col gap-2 text-xs font-medium text-gray-700 md:flex-row md:items-center md:justify-between">
           <p>Cleanex Argentina © Todos los derechos reservados</p>
           <p>{new Date().getFullYear()}</p>
+          <p className="text-gray-600">
+            Developed &amp; Quality Assured by{" "}
+            <a
+              href="https://focus-qa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-gray-700 underline-offset-2 transition hover:text-[var(--primary-dark)] hover:underline"
+            >
+              Focus QA
+            </a>
+          </p>
         </Container>
       </div>
     </footer>
