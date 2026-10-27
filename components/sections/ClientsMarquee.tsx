@@ -63,7 +63,7 @@ export default function ClientsMarquee() {
       </Container>
 
       <MarqueeViewport className="group mt-12 overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] motion-reduce:overflow-x-auto">
-        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] group-active:[animation-play-state:paused] motion-reduce:animate-none">
+        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] group-has-[:focus-visible]:[animation-play-state:paused] group-active:[animation-play-state:paused] motion-reduce:animate-none">
           <LogoList />
           <LogoList duplicate />
         </div>
