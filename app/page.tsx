@@ -1,4 +1,5 @@
 import About from "@/components/sections/About";
+import ClientsMarquee from "@/components/sections/ClientsMarquee";
 import ContactPreview from "@/components/sections/ContactPreview";
 import CTA from "@/components/sections/CTA";
 import EmergencyBanner from "@/components/sections/EmergencyBanner";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <EmergencyBanner />
       <Stats />
+      <ClientsMarquee />
       <Services />
       <About />
       <SecondaryCTAs />

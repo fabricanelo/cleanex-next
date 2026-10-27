@@ -12,6 +12,19 @@
   --border: #d1d5db;
 }
 
+@theme {
+  --animate-marquee: marquee 75s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
 }
