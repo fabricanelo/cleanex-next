@@ -1,8 +1,13 @@
 interface NewsletterFormProps {
   variant?: "light" | "dark";
+  // Apila los campos en todos los anchos, para columnas angostas como el footer.
+  stacked?: boolean;
 }
 
-export default function NewsletterForm({ variant = "light" }: NewsletterFormProps) {
+export default function NewsletterForm({
+  variant = "light",
+  stacked = false,
+}: NewsletterFormProps) {
   const inputStyles =
     variant === "dark"
       ? "border-white/20 bg-white/10 text-white placeholder:text-white/50"
@@ -15,7 +20,7 @@ export default function NewsletterForm({ variant = "light" }: NewsletterFormProp
       data-netlify="true"
       netlify-honeypot="bot-field"
       action="/gracias"
-      className="flex flex-col gap-3 sm:flex-row"
+      className={`flex flex-col gap-3 ${stacked ? "" : "sm:flex-row"}`}
     >
       <input type="hidden" name="form-name" value="newsletter" />
       <p className="hidden">
