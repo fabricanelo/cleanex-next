@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "out"
 
+# Variables públicas de build (se incrustan en el HTML estático).
+# En Vercel este archivo no se usa: cargar la variable en el proyecto (ver README).
+[build.environment]
+  NEXT_PUBLIC_CLEANEX_SURVEY_URL = "https://forms.gle/ekMhiDdCqG8U7cbo6"
+
 # Redirects 301 desde las URLs del sitio WordPress anterior hacia las nuevas
 # rutas del sitio Next.js, para conservar SEO y links existentes.
 

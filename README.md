@@ -44,7 +44,8 @@ está en el código: se lee de la variable `NEXT_PUBLIC_CLEANEX_SURVEY_URL`
 se muestra deshabilitado.
 
 1. **Dónde configurarla.** En desarrollo, en `.env.local` (copiar
-   `.env.example`). En Vercel, en *Settings → Environment Variables*.
+   `.env.example`). En Netlify (hosting actual), en `[build.environment]` de
+   `netlify.toml`. En Vercel, en *Settings → Environment Variables*.
 2. **Cómo reemplazarla.** Cambiar el valor de la variable por el enlace del
    formulario definitivo de Cleanex (*Enviar → Enlace* en Google Forms, con el
    formato `https://docs.google.com/forms/d/e/<ID>/viewform`). No hace falta
