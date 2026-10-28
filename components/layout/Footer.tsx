@@ -12,7 +12,7 @@ const socialClassName =
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-gray-100">
-      <Container className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.3fr] lg:gap-8">
+      <Container wide className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.4fr] lg:gap-8 xl:gap-16">
         <div>
           <Image
             src="/logos/cleanex-logo.svg"
@@ -114,8 +114,8 @@ export default function Footer() {
         </div>
       </Container>
 
-      <div className="border-t border-gray-200">
-        <Container className="flex flex-col gap-1 py-4 text-xs font-medium text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+      <div className="bg-gray-200">
+        <Container wide className="flex flex-col gap-1 py-4 text-xs font-medium text-gray-700 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} Cleanex Argentina. Todos los derechos
             reservados.

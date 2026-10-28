@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <Container className="flex h-20 items-center justify-between">
+      <Container wide className="flex h-20 items-center justify-between">
         <Link href="/" onClick={closeMobile}>
           <Image
             src="/logos/cleanex-logo.svg"
@@ -108,7 +108,7 @@ export default function Navbar() {
 
       {mobileOpen && (
         <div className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-gray-200 bg-white lg:hidden">
-          <Container className="flex flex-col py-2">
+          <Container wide className="flex flex-col py-2">
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="border-b border-gray-100 last:border-none">
                 <div className="flex items-center justify-between">
