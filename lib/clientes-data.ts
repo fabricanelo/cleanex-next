@@ -1,11 +1,21 @@
 export interface Cliente {
   nombre: string;
-  // Archivo dentro de /public/images/clients
-  logo: string;
-  url: string;
+  // Archivo dentro de /public/images/clients. Sin logo se muestra una
+  // tarjeta tipográfica con el nombre.
+  logo?: string;
+  // Sin URL la tarjeta se muestra sin enlace.
+  url?: string;
   // Corrige el tamaño visual en el carrusel de logos sin margen propio (default 1).
   escala?: number;
 }
+
+// Cifra comercial que se muestra en el título "N empresas confían en
+// nosotros". Pendiente de validación comercial: no implica que todos los
+// clientes del listado estén activos, por eso no se calcula desde `clientes`.
+export const cantidadClientesConfianza = 30;
+
+export const mensajeConfianza =
+  "La confianza de nuestros clientes respalda nuestra experiencia y compromiso con cada proyecto.";
 
 // Orden original de /clientes. Fuente única para /clientes y el carrusel del inicio.
 export const clientes: Cliente[] = [
@@ -39,4 +49,14 @@ export const clientes: Cliente[] = [
   { nombre: "Grupo Estisol", logo: "clientes-03.jpg", url: "https://grupoestisol.com/" },
   { nombre: "Pronexo", logo: "clientes-04.jpg", url: "https://www.pro-nexo.com/" },
   { nombre: "Coca-Cola Andina", logo: "clientes-mesa-trabajo-1.jpg", url: "https://www.koandina.com/" },
+  // Logos oficiales: Basile, Granix y Nestlé desde sus sitios (al de Nestlé se
+  // le recortó el eslogan del viewBox); Marolio desde Wikimedia Commons, tomado
+  // de fundacionmarolio.org.ar. Sin margen propio, por eso llevan `escala`.
+  { nombre: "Molinos Basile", logo: "molinos-basile.png", url: "https://molinosbasile.com.ar/es/", escala: 0.72 },
+  // Tarjeta tipográfica: no se usa el logo de Inca. Sin sitio confirmado.
+  { nombre: "Alimentos Premium S.A." },
+  { nombre: "Nestlé", logo: "nestle.svg", url: "https://www.nestle.com.ar/", escala: 0.72 },
+  { nombre: "Granix", logo: "granix.png", url: "https://granix.com.ar/", escala: 0.62 },
+  // El certificado https del sitio venció el 19/10/2026; revisar si lo renuevan.
+  { nombre: "Marolio", logo: "marolio.png", url: "https://www.marolio.com.ar/", escala: 0.62 },
 ];

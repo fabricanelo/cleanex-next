@@ -2,40 +2,61 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import MarqueeViewport from "@/components/ui/MarqueeViewport";
-import { clientes } from "@/lib/clientes-data";
+import {
+  cantidadClientesConfianza,
+  clientes,
+  mensajeConfianza,
+} from "@/lib/clientes-data";
 
 // La lista se renderiza dos veces y la pista se desplaza -50%, así el final
 // de la primera copia empalma con el inicio de la segunda sin saltos.
 // La copia duplicada queda fuera del árbol de accesibilidad y del tabulado.
+const cardClassName =
+  "flex h-24 w-36 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 sm:h-28 sm:w-44";
+
 function LogoList({ duplicate = false }: { duplicate?: boolean }) {
   return (
     <ul
       className={`flex shrink-0 items-center ${duplicate ? "motion-reduce:hidden" : ""}`}
       aria-hidden={duplicate || undefined}
     >
-      {clientes.map((cliente) => (
-        <li key={cliente.logo} className="shrink-0 px-2 sm:px-3">
-          <a
-            href={cliente.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            tabIndex={duplicate ? -1 : undefined}
-            aria-label={`${cliente.nombre} (abre su sitio en una pestaña nueva)`}
-            className="flex h-24 w-36 items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 transition hover:border-[var(--primary)] hover:shadow-lg focus-visible:border-[var(--primary-dark)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary-dark)] sm:h-28 sm:w-44"
-          >
-            {/* Los archivos originales traen margen blanco propio; se amplían
-                para equilibrar tamaños y `escala` corrige los que no lo tienen. */}
-            <Image
-              src={`/images/clients/${cliente.logo}`}
-              alt={duplicate ? "" : `Logo de ${cliente.nombre}`}
-              width={176}
-              height={112}
-              className="h-full w-full object-contain"
-              style={{ transform: `scale(${1.3 * (cliente.escala ?? 1)})` }}
-            />
-          </a>
-        </li>
-      ))}
+      {clientes.map((cliente) => {
+        const contenido = cliente.logo ? (
+          // Los archivos originales traen margen blanco propio; se amplían
+          // para equilibrar tamaños y `escala` corrige los que no lo tienen.
+          <Image
+            src={`/images/clients/${cliente.logo}`}
+            alt={duplicate ? "" : `Logo de ${cliente.nombre}`}
+            width={176}
+            height={112}
+            className="h-full w-full object-contain"
+            style={{ transform: `scale(${1.3 * (cliente.escala ?? 1)})` }}
+          />
+        ) : (
+          <span className="px-2 text-center text-xs font-bold uppercase leading-snug tracking-[0.15em] text-gray-800 sm:text-sm">
+            {cliente.nombre}
+          </span>
+        );
+
+        return (
+          <li key={cliente.nombre} className="shrink-0 px-2 sm:px-3">
+            {cliente.url ? (
+              <a
+                href={cliente.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={duplicate ? -1 : undefined}
+                aria-label={`${cliente.nombre} (abre su sitio en una pestaña nueva)`}
+                className={`${cardClassName} transition hover:border-[var(--primary)] hover:shadow-lg focus-visible:border-[var(--primary-dark)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary-dark)]`}
+              >
+                {contenido}
+              </a>
+            ) : (
+              <div className={cardClassName}>{contenido}</div>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -50,8 +71,12 @@ export default function ClientsMarquee() {
           </p>
 
           <h2 className="mt-4 text-4xl font-bold text-gray-900">
-            Empresas que confían en nosotros
+            {cantidadClientesConfianza} empresas confían en nosotros
           </h2>
+
+          <p className="mt-4 text-lg leading-relaxed text-gray-600">
+            {mensajeConfianza}
+          </p>
         </div>
 
         <Link

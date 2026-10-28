@@ -13,7 +13,8 @@
 }
 
 @theme {
-  --animate-marquee: marquee 75s linear infinite;
+  /* ~3 s por cliente mantiene la velocidad constante al sumar logos. */
+  --animate-marquee: marquee 90s linear infinite;
 
   @keyframes marquee {
     from {
