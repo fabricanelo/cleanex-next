@@ -2,7 +2,7 @@ import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import Container from "@/components/ui/Container";
 import { formatFecha, novedades } from "@/lib/novedades-data";
-import { IconArrowRight } from "@/components/ui/Icon";
+import { IconArrowRight, IconPin } from "@/components/ui/Icon";
 
 export default function NovedadesPage() {
   return (
@@ -22,9 +22,18 @@ export default function NovedadesPage() {
                 href={`/novedades/${novedad.slug}`}
                 className="rounded-3xl border border-gray-200 bg-white p-8 transition hover:border-[var(--primary)] hover:shadow-lg"
               >
-                <p className="text-sm text-gray-500">
-                  {formatFecha(novedad.fecha)}
-                </p>
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <p className="text-sm text-gray-500">
+                    {formatFecha(novedad.fecha)}
+                  </p>
+
+                  {novedad.fijada && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--primary)]/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--foreground)]">
+                      <IconPin className="h-3.5 w-3.5" aria-hidden="true" />
+                      Destacado
+                    </span>
+                  )}
+                </div>
 
                 <h2 className="mt-2 text-2xl font-semibold text-gray-900">
                   {novedad.titulo}

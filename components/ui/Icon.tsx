@@ -133,6 +133,15 @@ export function IconPaperclip(props: IconProps) {
   );
 }
 
+export function IconPin(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M9 4h6l-1 6 3.5 3.5v1.5h-11v-1.5L10 10 9 4Z" />
+      <path d="M12 15v5" />
+    </svg>
+  );
+}
+
 export function IconArrowRight(props: IconProps) {
   return (
     <svg {...base} {...props}>
